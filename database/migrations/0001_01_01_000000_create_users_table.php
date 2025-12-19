@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('type', ['administrator', 'editor', 'viewer'])->default('viewer');
-            $table->string('description', length: 200);
+            $table->string('description', length: 200)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
